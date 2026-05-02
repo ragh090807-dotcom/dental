@@ -14,6 +14,7 @@ body {
     color: #1e293b;
 }
 
+/* NAVBAR */
 nav {
     width: 100%;
     padding: 20px 9%;
@@ -48,6 +49,7 @@ nav {
     color: #0077b6;
 }
 
+/* HERO */
 .hero {
     min-height: 88vh;
     padding: 70px 9%;
@@ -90,6 +92,8 @@ nav {
     color: white;
     padding: 14px 30px;
     border-radius: 40px;
+    border: none;
+    cursor: pointer;
     text-decoration: none;
     font-weight: 600;
     box-shadow: 0 12px 28px rgba(0,119,182,0.22);
@@ -116,6 +120,7 @@ nav {
     box-shadow: 0 25px 50px rgba(2,62,138,0.18);
 }
 
+/* STATS */
 .stats {
     width: 82%;
     margin: -55px auto 0;
@@ -126,8 +131,6 @@ nav {
     padding: 28px;
     border-radius: 30px;
     box-shadow: 0 20px 45px rgba(0,0,0,0.1);
-    position: relative;
-    z-index: 5;
 }
 
 .stats div {
@@ -149,14 +152,14 @@ nav {
     font-size: 14px;
 }
 
+/* GENERAL SECTION */
 section {
     padding: 85px 9%;
 }
 
 .section-title {
     text-align: center;
-    max-width: 700px;
-    margin: 0 auto 45px;
+    margin-bottom: 45px;
 }
 
 .section-title h2 {
@@ -164,15 +167,7 @@ section {
     color: #023e8a;
 }
 
-.section-title p {
-    color: #0077b6;
-    font-weight: 600;
-}
-
-.about {
-    background: white;
-}
-
+/* ABOUT */
 .about-container {
     display: grid;
     grid-template-columns: 0.9fr 1.1fr;
@@ -185,7 +180,6 @@ section {
     height: 470px;
     object-fit: cover;
     border-radius: 35px;
-    box-shadow: 0 20px 45px rgba(0,0,0,0.12);
 }
 
 .about-text {
@@ -194,36 +188,7 @@ section {
     border-radius: 35px;
 }
 
-.about-text h3 {
-    font-size: 30px;
-    color: #023e8a;
-    margin-bottom: 15px;
-}
-
-.about-text p {
-    color: #475569;
-    margin-bottom: 24px;
-}
-
-.features {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-}
-
-.features div {
-    background: white;
-    padding: 15px;
-    border-radius: 16px;
-    border-left: 5px solid #00b4d8;
-    font-weight: 500;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-}
-
-.services {
-    background: #f7fbff;
-}
-
+/* SERVICES */
 .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -252,57 +217,43 @@ section {
     padding: 24px;
 }
 
-.card h3 {
-    color: #023e8a;
-    margin-bottom: 8px;
-}
-
-.card p {
-    color: #64748b;
-    font-size: 14px;
-}
-
-.appointment {
-    background: white;
-}
-
+/* ✅ APPOINTMENT FORM FIX (IMPORTANT) */
 .appointment-box {
     background: linear-gradient(135deg, #023e8a, #0096c7);
     color: white;
     padding: 50px;
     border-radius: 35px;
+    text-align: center;
+}
+
+.appointment-box form {
+    margin-top: 25px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
-    box-shadow: 0 20px 45px rgba(2,62,138,0.18);
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.appointment-box h2 {
-    font-size: 34px;
-    margin-bottom: 10px;
+.appointment-box input {
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 15px;
 }
 
-.appointment-box .tagline {
-    color: #caf0f8;
+#result {
+    margin-top: 15px;
+    font-weight: 500;
 }
 
-.appointment-box .btn {
-    background: white;
-    color: #023e8a;
-    white-space: nowrap;
-}
-
-.contact {
-    background: #f7fbff;
-}
-
+/* CONTACT */
 .contact-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 28px;
-    max-width: 900px;
-    margin: auto;
 }
 
 .contact-card {
@@ -310,24 +261,9 @@ section {
     padding: 35px;
     border-radius: 28px;
     text-align: center;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
 }
 
-.contact-card h3 {
-    color: #023e8a;
-    margin-bottom: 12px;
-    font-size: 24px;
-}
-
-.contact-card p {
-    margin-bottom: 14px;
-    color: #475569;
-}
-
-.contact-card a {
-    text-decoration: none;
-}
-
+/* FOOTER */
 footer {
     background: #021f4a;
     color: white;
@@ -335,20 +271,8 @@ footer {
     padding: 24px;
 }
 
+/* RESPONSIVE */
 @media(max-width: 950px) {
-    nav {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .nav-links {
-        text-align: center;
-    }
-
-    .nav-links a {
-        display: inline-block;
-        margin: 8px;
-    }
 
     .hero {
         grid-template-columns: 1fr;
@@ -359,49 +283,19 @@ footer {
         font-size: 40px;
     }
 
-    .hero-desc {
-        margin: 0 auto 30px;
-    }
-
-    .hero-buttons {
-        justify-content: center;
-    }
-
-    .hero-image img {
-        height: 320px;
+    .cards {
+        grid-template-columns: 1fr;
     }
 
     .stats {
         grid-template-columns: repeat(2, 1fr);
-        margin-top: 20px;
-    }
-
-    .stats div {
-        border-right: none;
     }
 
     .about-container {
         grid-template-columns: 1fr;
     }
 
-    .about-image img {
-        height: 320px;
-    }
-
-    .cards {
-        grid-template-columns: 1fr;
-    }
-
-    .appointment-box {
-        flex-direction: column;
-        text-align: center;
-    }
-
     .contact-container {
-        grid-template-columns: 1fr;
-    }
-
-    .features {
         grid-template-columns: 1fr;
     }
 }
